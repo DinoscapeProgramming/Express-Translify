@@ -1,0 +1,40 @@
+{
+  "name": "express-translify",
+  "version": "1.4.7",
+  "description": "A drop-in translation module for real-world Express applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "translate": "./bin/translate.js"
+  },
+  "repository": "https://github.com/DinoscapeProgramming/Express-Translify",
+  "homepage": "https://github.com/DinoscapeProgramming/Express-Translify",
+  "keywords": [
+    "translate",
+    "translation",
+    "express",
+    "express-middleware",
+    "i18n",
+    "internationalization",
+    "locales",
+    "localization",
+    "multilingual",
+    "language-support",
+    "drop-in",
+    "easy-i18n",
+    "middleware",
+    "nodejs",
+    "fast",
+    "lightweight",
+    "no-refactor"
+  ],
+  "author": "DinoscapeProgramming",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "p-limit": "^6.2.0"
+  }
+}
