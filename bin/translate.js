@@ -7,14 +7,15 @@ const pLimit = require("p-limit").default;
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
+const localesPath = process.argv[process.argv.indexOf("--out") + 1] || "locales";
 const { languages = [], terms = [] } = JSON.parse(fs.readFileSync("./package.json", "utf8") || "{}").translify || {};
 
-if (!fs.existsSync("./locales")) fs.mkdirSync("./locales");
+if (!fs.existsSync(path.join(process.cwd(), localesPath))) fs.mkdirSync(path.join(process.cwd(), localesPath));
 
 const locales = Object.fromEntries(
-  fs.readdirSync("./locales").map((language) => [
+  fs.readdirSync(path.join(process.cwd(), localesPath)).map((language) => [
     language.slice(0, -5),
-    JSON.parse(fs.readFileSync(`./locales/${language}`, "utf8") || "{}")
+    JSON.parse(fs.readFileSync(path.join(process.cwd(), localesPath, language), "utf8") || "{}")
   ])
 );
 
@@ -69,7 +70,7 @@ ${lines.map(center).join("\n")}
       ))).filter((entry) => entry.length)
     );
 
-    fs.writeFileSync(`./locales/${language}.json`, JSON.stringify(translations, null, 2), "utf8");
+    fs.writeFileSync(path.join(process.cwd(), localesPath, `${language}.json`), JSON.stringify(translations, null, 2), "utf8");
 
     const lines = [
       `🗣️    Translation Completed: ${language}`

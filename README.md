@@ -46,12 +46,24 @@ $ npm install express-translify
 $ npx translate
 ```
 
+Need a custom output path? Use the --out option 🛣️:
+
+```sh
+$ npx translate --out custom-path
+```
+
 ## 4. 🧩 Use Our Express Middleware
 
 ```js
 const translify = require("express-translify");
 
 app.use(translify());
+```
+
+Using a custom locales path? Pass it in with the path option 🗂️:
+
+```js
+app.use(translify({ path: "custom-path" }));
 ```
 
 ## 5. 🌐 Import Translify Into Your Website

@@ -19,7 +19,7 @@ function translify({ path: localesPath = "locales" } = {}) {
     });
   });
 
-  router.use(`/${localesPath}`, express.static(path.resolve(localesPath)));
+  router.use("/locales", express.static(path.resolve(localesPath)));
 
   return router;
 };
