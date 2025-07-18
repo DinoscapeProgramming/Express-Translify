@@ -40,6 +40,19 @@ $ npm install express-translify
 }
 ```
 
+### ✍️ Placeholders in Terms
+
+Use `[...]` to mark dynamic parts in your terms:
+
+```json
+"terms": [
+  "Hello, [...]!",
+  "You have [...] new messages"
+]
+```
+
+> `[...]` means "leave this part out" - it won't be translated.
+
 ## 3. 🛠️ Generate Your Locales
 
 ```sh
