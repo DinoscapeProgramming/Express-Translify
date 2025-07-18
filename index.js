@@ -17,7 +17,7 @@ function translify({ path: localesPath = "locales" } = {}) {
       default: defaultLanguage,
       languages,
       terms,
-      hash: crypto.createHash("sha256").update(JSON.stringify([...terms].sort())).digest("hex")
+      hashes: Object.fromEntries(languages.map((language) => [language, crypto.createHash("sha256").update(JSON.stringify(Object.entries(JSON.parse(fs.readFileSync(path.join(process.cwd(), localesPath, `${language}.json`)) || "{}")).sort(([firstKey, secondKey]) => firstKey.localeCompare(secondKey)))).digest("hex") || crypto.randomBytes(8).toString("hex")]))
     });
   });
 
