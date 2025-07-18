@@ -7,7 +7,9 @@ const pLimit = require("p-limit").default;
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-const localesPath = process.argv[process.argv.indexOf("--out") + 1] || "locales";
+const outIndex = process.argv.indexOf("--out");
+const localesPath = (outIndex !== -1) && process.argv[outIndex + 1] && !process.argv[outIndex + 1].startsWith("--") ? process.argv[outIndex + 1] : "locales";
+
 const { languages = [], terms = [] } = JSON.parse(fs.readFileSync("./package.json", "utf8") || "{}").translify || {};
 
 if (!fs.existsSync(path.join(process.cwd(), localesPath))) fs.mkdirSync(path.join(process.cwd(), localesPath));
