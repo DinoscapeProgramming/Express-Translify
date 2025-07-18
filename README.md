@@ -46,7 +46,7 @@ $ npm install express-translify
 $ npx translate
 ```
 
-Need a custom output path? Use the --out option 🛣️:
+Need a custom output path? Use the `--out` option 🛣️:
 
 ```sh
 $ npx translate --out custom-path
@@ -60,19 +60,25 @@ const translify = require("express-translify");
 app.use(translify());
 ```
 
-Using a custom locales path? Pass it in with the path option 🗂️:
+Using a custom locales path? Pass it in with the `path` option 🗂️:
 
 ```js
 app.use(translify({ path: "custom-path" }));
 ```
 
-## 5. 🌐 Import Translify Into Your Website
+## 5. 🔌 Import Translify Into Your Website
 
 ```html
 <!-- Our middleware automatically serves all necessary assets -->
 <script src="/translify.js"></script>
 ```
 
-## 6. 🎉 Enjoy Translations in Your App
+## 6. 🧭 Switching Languages at Runtime
+
+```js
+translify("de"); // 🇩🇪 Switches to German
+```
+
+## 7. 🎉 Enjoy Translations in Your App
 
 That's it! Your Express app now speaks multiple languages - no refactoring, no stress. 🌍✨
