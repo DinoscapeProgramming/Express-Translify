@@ -86,6 +86,8 @@ app.use(translify({ path: "custom-path" }));
 <script src="/translify.js"></script>
 ```
 
+> **Note:** If a term matches the page title, `document.title` is translated too.
+
 ## 6. 🧭 Switching Languages at Runtime
 
 ```js
