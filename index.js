@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const express = require("express");
 
 function translify({ path: localesPath = "locales" } = {}) {
@@ -15,7 +16,8 @@ function translify({ path: localesPath = "locales" } = {}) {
     res.json({
       default: defaultLanguage,
       languages,
-      terms
+      terms,
+      hash: crypto.createHash("sha256").update(JSON.stringify([...terms].sort())).digest("hex")
     });
   });
 

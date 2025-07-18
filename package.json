@@ -1,6 +1,6 @@
 {
   "name": "express-translify",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "A drop-in translation module for real-world Express applications",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,7 @@
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
+    "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "p-limit": "^6.2.0"
   }
