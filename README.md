@@ -3,7 +3,7 @@
 A drop-in translation module for real-world Express applications 🌍
 
 * ⚡ **Drop-in** *(no refactoring needed)*
-* 🪶 **Lightweight** *(< 16 KB)*
+* 🪶 **Lightweight** *(< 17 KB)*
 * 🚀 **Fast** *(caching)*
 
 ---

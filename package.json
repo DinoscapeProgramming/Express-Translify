@@ -1,6 +1,6 @@
 {
   "name": "express-translify",
-  "version": "1.7.11",
+  "version": "1.7.12",
   "description": "A drop-in translation module for real-world Express applications",
   "main": "index.js",
   "scripts": {
