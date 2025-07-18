@@ -66,7 +66,7 @@ Using a custom locales path? Pass it in with the `path` option 🗂️:
 app.use(translify({ path: "custom-path" }));
 ```
 
-## 5. 🔌 Import Translify Into Your Website
+## 5. 📥 Import Translify Into Your Website
 
 ```html
 <!-- Our middleware automatically serves all necessary assets -->
