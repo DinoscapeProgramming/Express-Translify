@@ -4,7 +4,7 @@ A drop-in translation module for real-world Express applications 🌍
 
 * ⚡ **Drop-in** *(no refactoring needed)*
 * 🪶 **Lightweight** *(< 17 KB)*
-* 🚀 **Fast** *(caching)*
+* 🚀 **Fast** *(smart client-side caching)*
 
 ---
 
