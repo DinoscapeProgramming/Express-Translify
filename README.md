@@ -1,10 +1,10 @@
-# 🚀 Express Translify
+# 🚀 Express Translify 🚀
 
 A drop-in translation module for real-world Express applications 🌍
 
-* ⚡ **Drop-in** *(no refactoring needed)*
+* 🪄 **Drop-in** *(no refactoring needed)*
 * 🪶 **Lightweight** *(< 17 KB)*
-* 🚀 **Fast** *(smart client-side caching)*
+* ⚡ **Fast** *(smart client-side caching)*
 
 ---
 
