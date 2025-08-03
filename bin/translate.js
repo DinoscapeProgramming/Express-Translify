@@ -5,7 +5,7 @@ const path = require("path");
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const pLimit = require("p-limit").default;
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const delay = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 
 const outIndex = process.argv.indexOf("--out");
 const localesPath = ((outIndex !== -1) && process.argv[outIndex + 1] && !process.argv[outIndex + 1].startsWith("--")) ? process.argv[outIndex + 1] : "locales";
