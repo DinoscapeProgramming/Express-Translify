@@ -34,8 +34,10 @@
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "p-limit": "^6.2.0"
+  },
+  "peerDependencies": {
+    "express": "^4.0.0"
   }
 }
