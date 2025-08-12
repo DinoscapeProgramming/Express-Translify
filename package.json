@@ -38,6 +38,6 @@
     "p-limit": "^6.2.0"
   },
   "peerDependencies": {
-    "express": "^4.0.0"
+    "express": ">=4.0.0"
   }
 }
