@@ -11,7 +11,8 @@ function translify({ path: localesPath = "locales" } = {}) {
   });
 
   router.get("/translify.json", (req, res) => {
-    const { default: defaultLanguage = "en", languages = [], terms = [] } = JSON.parse(fs.readFileSync("./package.json", "utf8") || "{}").translify || {};
+    const config = JSON.parse(fs.readFileSync("./package.json", "utf8") || "{}").translify || {};
+    const { default: defaultLanguage = "en", languages = [], terms = [] } = (typeof config === "string") ? JSON.parse(fs.readFileSync(path.join(process.cwd(), config), "utf8") || "{}") : config;
 
     res.json({
       default: defaultLanguage,

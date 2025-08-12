@@ -10,7 +10,8 @@ const delay = (milliseconds) => new Promise((resolve) => setTimeout(resolve, mil
 const outIndex = process.argv.indexOf("--out");
 const localesPath = ((outIndex !== -1) && process.argv[outIndex + 1] && !process.argv[outIndex + 1].startsWith("--")) ? process.argv[outIndex + 1] : "locales";
 
-const { languages = [], terms = [] } = JSON.parse(fs.readFileSync("./package.json", "utf8") || "{}").translify || {};
+const config = JSON.parse(fs.readFileSync("./package.json", "utf8") || "{}").translify || {};
+const { languages = [], terms = [] } = (typeof config === "string") ? JSON.parse(fs.readFileSync(path.join(process.cwd(), config), "utf8")) : config;
 
 if (!fs.existsSync(path.join(process.cwd(), localesPath))) fs.mkdirSync(path.join(process.cwd(), localesPath));
 

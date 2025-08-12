@@ -40,6 +40,16 @@ $ npm install express-translify
 }
 ```
 
+✨ Or, if you prefer, you can simply provide a path to an external config file like `"translify.json"` to keep things neat and separate:
+
+```json
+{
+  "translify": "translify.json"
+}
+```
+
+This way, you get all the flexibility without cluttering your `package.json`! 🎉
+
 ### ✍️ Placeholders in Terms
 
 Use `[...]` to mark dynamic parts in your terms:
